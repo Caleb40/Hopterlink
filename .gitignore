@@ -176,12 +176,17 @@ typings/
 
 # Sensitive or high-churn files:
 .idea/**/dataSources/
+.idea/**/runConfigurations/
 .idea/**/dataSources.ids
 .idea/**/dataSources.xml
 .idea/**/dataSources.local.xml
 .idea/**/sqlDataSources.xml
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/webResources.xml
 
 # Gradle:
 .idea/**/gradle.xml
@@ -328,3 +333,5 @@ dump.rdb
 hopterlink/media/
 
 .pytest_cache/
+
+.env
