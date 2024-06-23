@@ -33,7 +33,7 @@ class SocialAccountAdapter(DefaultSocialAccountAdapter):
         data: dict[str, typing.Any],
     ) -> User:
         """
-        Populates user information from social provider info.
+        Populates user information from social businesses info.
 
         See: https://docs.allauth.org/en/latest/socialaccount/advanced.html#creating-and-populating-user-instances
         """
