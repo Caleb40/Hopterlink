@@ -10,6 +10,8 @@ from drf_spectacular.views import SpectacularAPIView
 from drf_spectacular.views import SpectacularSwaggerView
 from rest_framework.authtoken.views import obtain_auth_token
 
+from hopterlink.users.views import FacebookLogin, GoogleLogin
+
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path(
@@ -40,6 +42,11 @@ urlpatterns += [
         SpectacularSwaggerView.as_view(url_name="api-schema"),
         name="api-docs",
     ),
+    # django-rest auth urls
+    path("auth/", include("dj_rest_auth.urls")),
+    path("auth/registration/", include("dj_rest_auth.registration.urls")),
+    path("auth/google/", GoogleLogin.as_view(), name="google_login"),
+    path("auth/facebook/", FacebookLogin.as_view(), name="fb_login"),
 ]
 
 if settings.DEBUG:
