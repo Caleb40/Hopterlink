@@ -302,8 +302,8 @@ SOCIALACCOUNT_FORMS = {"signup": "hopterlink.users.forms.UserSocialSignupForm"}
 # django-rest-framework - https://www.django-rest-framework.org/api-guide/settings/
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
-        "rest_framework.authentication.SessionAuthentication",
-        "rest_framework.authentication.TokenAuthentication",
+        # "rest_framework.authentication.SessionAuthentication",
+        # "rest_framework.authentication.TokenAuthentication",
         "dj_rest_auth.jwt_auth.JWTCookieAuthentication",
     ),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
@@ -326,6 +326,6 @@ SPECTACULAR_SETTINGS = {
 # ------------------------------------------------------------------------------
 REST_AUTH = {
     "USE_JWT": True,
-    "JWT_AUTH_COOKIE": "my-app-auth",
-    "JWT_AUTH_REFRESH_COOKIE": "my-refresh-token",
+    "JWT_AUTH_COOKIE": "hopterlink-auth-token",
+    "JWT_AUTH_REFRESH_COOKIE": "hopterlink-refresh-token",
 }
