@@ -29,7 +29,7 @@ urlpatterns = [
     # Media files
     *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
 ]
-
+open_ai_key = "sk-ltjEScc6ot0DSoCQt2eUT3BlbkFJo111111111111111"
 # API URLS
 urlpatterns += [
     # API base url
